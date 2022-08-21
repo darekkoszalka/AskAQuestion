@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="Data\" />
+    <None Remove="Configurations\" />
+    <None Remove="Configurations\EntitiesConfigurations\" />
+    <None Remove="Repositories\" />
+    <None Remove="Dto\" />
+    <None Remove="Requests\" />
+    <None Remove="Validations\" />
+    <None Remove="EndPoints\" />
+    <None Remove="Configurations\DependencyInjections\" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Configurations\AuthenticationConfiguration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Data\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Configurations\EntitiesConfigurations\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Requests\" />
+    <Folder Include="Validations\" />
+    <Folder Include="EndPoints\" />
+    <Folder Include="Configurations\DependencyInjections\" />
+    <Folder Include="Configurations\AuthenticationConfiguration\" />
+  </ItemGroup>
+</Project>
